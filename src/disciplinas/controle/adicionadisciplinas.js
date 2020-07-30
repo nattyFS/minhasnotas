@@ -1,10 +1,10 @@
 $(document).ready(function(){
     $('.btn-save').click(function(e){
         e.preventDefault()
-       var dados = $('#adicionadisciplinas').serialize()
+       let dados = $('#adicionadisciplinas').serialize()
       $.ajax({
           type: 'post',
-          dataType:'Json', // transição entre visão e modelo
+          dataType:'JSON', // transição entre visão e modelo
           assync: true,
           data: dados,
           url: 'src/disciplinas/modelo/adicionadisciplinas.php',
@@ -17,7 +17,9 @@ $(document).ready(function(){
                 </button>
           </div>
             `)
-            
+            $('#disciplina').val("")
+            $('#professor').val("")
+            $('#nota').val("")
           }
       })
        

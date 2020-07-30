@@ -12,13 +12,13 @@ include('../../conexao/conn.php');
         $sql = "INSERT INTO disciplinas (nome, professor, nota) VALUES ('".$nome."', '".$professor."', '".$nota."')";
         if(mysqli_query($conecta, $sql)){
             $dados = array(
-                'tipo'=> 'alert-success'
-                'mensagem' => 'Os dados foram cadastrados com sucesso'
+                'tipo'=> 'alert-success',
+                'mensagem' => 'Os dados da disciplina '.$nome.', foram cadastrados com sucesso'
             );
         }else{
             $dados = array(
-                'tipo'=> 'alert-danger'
-                'mensagem' => 'QUE PENA!!! Houve um erro no cadastro'
+                'tipo'=> 'alert-danger',
+                'mensagem' => 'QUE PENA!!! Houve um erro no cadastro'.mysql_error($conecta);
             );
         }
     }
