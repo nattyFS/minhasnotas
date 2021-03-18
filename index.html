@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APP MINHAS NOTAS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Gerenciador De Boletins</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="MaterialDesign-Webfont-master/css/materialdesignicons.css">
-
-    <style>
-       @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-
-       h1
-       {font-family: 'Concert One', cursive;}
-        </style> 
-
+    <link rel="stylesheet" href="libs/MaterialDesign-Webfont-master/css/materialdesignicons.css">
+    <link rel="stylesheet" href="css/btns.css">
 </head>
-<body>
-    <div class="jumbotron jumbotron-fluid bg-danger">
-        <h1 class="display-4 text-center text-white">APP MINHAS NOTAS</h1>
-        <p class="lead text-center text-white">Aplicativo de controle do meu desempenho escolar</p>
-    </div>
-    <div class="container" id="conteudo">
-        <div class="row">
-            <div class="col-6 col-md-2">
-                <button id="adiciona" class="btn btn-outline-danger btn-block">
-                    <h1 class="text-center">
-                        <i class="mdi mdi-plus-circle mdi 48px"></i>
-                    </h1>
-                    <p class="text-center">adicionar disciplina</p>
-                </button>
-            </div> 
-             <div class="container" id="conteudo">
-                <div class="row">
-                    <div class="col-6 col-md-2">
-                        <button id="listar" class="btn btn-outline-danger btn-block">
-                            <h1 class="text-center">
-                                <i class="mdi mdi-view-list-outline mdi48px"></i>
-                            </h1>
-                            <p class="text-center">listar disciplinas</p>
-                        </button>
-                    </div>
+    <style>
+        #form-login{
+           text-align:center;
+         
+        }
+        .container{
+            margin-top: 100px;
+        }
+        .login{
+            background-image: url('img/fundo4.jpg');
+            background-repeat: no-repeat;
+            background-size:100%;
+            bottom: 0;
+            color: black;
+            left: 0;
+            overflow: auto;
+            padding: 3em;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+        }
+       
+    </style>
+    <body>
+        <div class="login">
+    <div class="container">
+        <div class="row justify-content-left">
+            <div class="col-12-sm-6 col-md-4">
+                <div class="alert alert-dark nt-3">
+                    <h4 class="text-center">
+                        Login Do Sistema
+                    </h4>
                 </div>
-            </div>
-    
-    <div class="container-fluid border-top mt-5">
-        <div class="row justify-content-center">
-            <div class="col-10 col-md-6">
-                <p class="text-center text-danger">
-                    Todos os direitos reservados para a Etec da cidade Lins.
-                </p>
+                <form id="form-login">
+                    <div class="form-group text-white">
+                        <label>Id do aluno</label>
+                        <input type="number" id="id" name="id" class="form-control">
+                    </div>
+                    <div class="form-group text-white">
+                        <label>Senha de cadastro do aluno</label>
+                        <input type="password" id="senha" name="senha" class="form-control">
+                    </div>
+                    <button class="btn btn-success btn-block btn-effects btn-bounce btn-login"><i class="mdi mdi-login">entrar</i></button>
+                </form>
             </div>
         </div>
     </div>
-
-
-
-    <script src="jquery-3.5.1.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/function-menu.js"></script>
+</div>
+    
+   <script src="jquery-3.5.1.js"></script>
+   <script src="js/bootstrap.js"></script>
+   <script src="src/alunos/controle/login-alunos.js"></script>
 </body>
 </html>

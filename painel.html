@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP MINHAS NOTAS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="libs/MaterialDesign-Webfont-master/css/materialdesignicons.css">
+    <link rel="stylesheet" href="css/btns.css">
+
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+       h1
+       {font-family: 'Concert One', cursive;}
+        </style> 
+
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid bg-dark">
+        <h1 class="display-4 text-center text-white">APP MINHAS NOTAS</h1>
+        <p class="lead text-center ">Aplicativo de controle do meu desempenho escolar</p>
+        <p  id="boasvindas" class="lead text-center "></p>
+        <p class="text-center text-white">
+            <a href="painel.html" class="text-white">
+                <i class="mdi mdi-home-circle mdi-48px"> HOME</i>
+            </a>
+            <a  href="" id="logout" class="text-white ml-5">
+                <i class="mdi mdi-logout-variant mdi-24px">Sair do sistema</i>
+            </a>
+        </p>
+    </div>
+    <div class="container" id="conteudo">
+        <div class="row">
+            <div class="col-6 col-md-2 alunos">
+                <a href="src/alunos/visao/adiciona-alunos.html"  class="btn btn-outline-dark btn-block btn-effects btn-rotate">
+                    <h1 class="text-center">
+                        <i class="mdi mdi-plus-circle mdi 48px"></i>
+                    </h1>
+                    <p class="text-center">adicionar aluno</p>
+                </a>
+            </div> 
+             <div class="container" id="conteudo">
+                <div class="row">
+                    <div class="col-6 col-md-2 alunos">
+                        <a href="src/alunos/visao/lista-alunos.html" class="btn btn-outline-dark btn-block  btn-effects btn-rotate">
+                            <h1 class="text-center">
+                                <i class="mdi mdi-view-list-outline mdi48px"></i>
+                            </h1>
+                            <p class="text-center">listar alunos</p>
+                        </a>
+                    </div>
+    
+            <div class="col-6 col-md-2">
+                <a href="src/disciplinas/visao/adicionadisciplinas.html"  class="btn btn-outline-dark btn-block  btn-effects btn-rotate">
+                    <h1 class="text-center">
+                        <i class="mdi mdi-plus-circle mdi 48px"></i>
+                    </h1>
+                    <p class="text-center">adicionar disciplina</p>
+                </a>
+            </div> 
+             <div class="container" id="conteudo">
+                <div class="row">
+                    <div class="col-6 col-md-2">
+                        <a href="src/disciplinas/visao/list-disciplinas.html" class="btn btn-outline-dark btn-block  btn-effects btn-rotate">
+                            <h1 class="text-center">
+                                <i class="mdi mdi-view-list-outline mdi48px"></i>
+                            </h1>
+                            <p class="text-center">listar disciplinas</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+    <div class="container-fluid border-top mt-5">
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6">
+                <p class="text-center text-dark">
+                    Todos os direitos reservados para a Etec da cidade Lins.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/function-menu.js"></script>
+    <script src="src/alunos/controle/ctr-menu.js"></script>
+    <script src="src/alunos/controle/valida-alunos.js"></script>
+    <script src="src/alunos/controle/logout-alunos.js"></script>
+
+</body>
+</html>

@@ -1,15 +1,22 @@
 <?php
+// Instancio a minha conexão de banco de dados
+include('../../conexao/conn.php');
+session_start();
+ 
+// Criar uma query de consulta ao banco de dados
+$sql = "SELECT * FROM disciplinas WHERE id_alunos = ".$_SESSION['id']."";
 
-include("../../conexao/conn.php");
-$sql = "SELECT * FROM disciplinas";
+// Agora iremos executar nossa query SQL
+$resultado = mysqli_query($conecta, $sql);
 
-$resultado = mysqli_query($conecta,$sql);
+// Iremos testar nossa consulta ao banco de dados, para ver se ela nãoe stá retornando vazia
 if($resultado && mysqli_num_rows($resultado)>0){
-    while($linha = mysqli_fetch_assoc($resultado)){
-        $dados[] = array_map('utf8_encode',$linha);
-    }
+// Associar os registros encontrados em um array
+while($linha = mysqli_fetch_assoc($resultado)){
+$dados[] = array_map(null, $linha);
+}
 }else{
-        $dados =array('erro'=>'não conseguimos encontrar resultados ');
-    }
-   
+$dados = array('erro' => 'Não foi possível buscar resultados');
+}
+
 echo json_encode($dados);

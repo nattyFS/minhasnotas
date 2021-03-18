@@ -1,13 +1,10 @@
 $(document).ready(function() {
 
-    $('#adiciona').click(function(e) {
+    $('.btn').click(function(e) {
         e.preventDefault()
+        let url = $(this).attr('href')
         $('#conteudo').empty()
-        $('#conteudo').load('src/disciplinas/visao/adicionadisciplinas.html')
+        $('#conteudo').load(url)
     })
-    $('#listar').click(function(e) {
-        e.preventDefault()
-        $('#conteudo').empty()
-        $('#conteudo').load('src/disciplinas/visao/list-disciplinas.html')
-    })
+   
 })
